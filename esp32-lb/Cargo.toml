@@ -1,0 +1,25 @@
+[package]
+name = "esp32-lb"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+hyper = { version = "1", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+http-body-util = "0.1"
+bytes = "1.10.1"
+hyper-util = { version = "0.1", features = ["full"] }
+arc-swap = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+tracing-appender = "0.2"
+axum = "0.8.6"
+serde = { version = "1.0.228", features = ["derive"] }
+
+[dependencies.uuid]
+version = "1.18.1"
+# Lets you generate random UUIDs
+features = [
+    "v4",
+    "serde",
+]
